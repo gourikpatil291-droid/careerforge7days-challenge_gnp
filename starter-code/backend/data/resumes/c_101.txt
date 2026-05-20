@@ -1,0 +1,8 @@
+Aarav Mehta
+Frontend Engineer
+
+Skills: React, JavaScript, API integration, debugging, testing.
+
+Experience:
+Built recruiter dashboards with React and connected UI flows to backend API services.
+Investigated browser network failures and fixed production UI issues using logs and testing.

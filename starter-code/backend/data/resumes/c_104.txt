@@ -1,0 +1,8 @@
+Meera Iyer
+Junior Developer
+
+Skills: HTML, CSS, JavaScript, teamwork, communication.
+
+Experience:
+Completed coursework and contributed to static website projects.
+Learning production debugging, API behavior, and systematic verification.

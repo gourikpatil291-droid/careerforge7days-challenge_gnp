@@ -1,0 +1,9 @@
+Nisha Rao
+Full Stack Engineer
+
+Skills: React, Node, Express, API design, deployment, system design, database, production readiness.
+
+Experience:
+Shipped full-stack applications with Node APIs and React dashboards.
+Handled deployment verification, environment configuration, and production incident notes.
+Improved debugging workflows by checking logs, health endpoints, and release behavior.
