@@ -47,6 +47,22 @@ Your job is not to make the app look alive. Your job is to decide whether the de
 9. Make a readiness decision: `Ship`, `Block`, or `Conditional`.
 10. Defend your decision in a short video and live viva.
 
+## Provided To Solve The Case
+
+- HireSignal app repo
+- Setup guide
+- Backend README
+- Frontend README
+- HireSignal scenario package
+- Assigned D3-C incident packet
+
+## Outcome Artifacts You Get
+
+- Production Readiness Brief
+- Workflow Verification Evidence
+- Ship / Block / Conditional release decision
+- Readiness Defense Video
+
 ## Hard Fail
 
 This answer fails:
