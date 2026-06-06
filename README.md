@@ -54,6 +54,23 @@ You pass by showing evidence.
 
 Founder reviewers will check your repo, your Engineering Investigation Report, your evidence video, and your ability to answer live questions about your own work.
 
+## Provided To Solve The Case
+
+- Broken Candidate Review Ops Console repo
+- Setup guide
+- Incident brief
+- Evidence guide
+- Backend README
+- Frontend README
+- Assigned Day 1 variant
+
+## Outcome Artifacts You Get
+
+- Fixed engineering repository
+- Engineering Investigation Report
+- Evidence Defense Video
+- Founder review outcome
+
 ## Setup
 
 - [Setup Guide](./docs/setup-guide.md)
