@@ -90,8 +90,10 @@ Submit only:
 
 1. GitHub branch
 2. [Demo Readiness Verification Brief](./submission-templates/demo-readiness-verification-brief-template.md)
-3. [4-minute Readiness Defense Video](./submission-templates/readiness-defense-video-guide.md)
-4. Live founder viva
+3. [Workflow Verification Evidence](./submission-templates/workflow-verification-evidence-template.md)
+4. [Release Judgment Decision](./submission-templates/release-judgment-decision-template.md)
+5. [4-minute Readiness Defense Video](./submission-templates/readiness-defense-video-guide.md)
+6. Live founder viva
 
 No separate checklist. No reflection. No AI usage log. Evidence goes inside the readiness brief.
 
