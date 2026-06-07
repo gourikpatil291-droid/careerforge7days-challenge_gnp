@@ -1,12 +1,13 @@
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
 async function request(path, options = {}) {
   const response = await fetch(`${API_URL}${path}`, {
+    method: options.method || "GET",
     headers: {
       "Content-Type": "application/json",
-      ...options.headers
+      ...(options.headers || {})
     },
-    ...options
+    body: options.body || undefined
   });
 
   const data = await response.json().catch(() => ({}));

@@ -28,38 +28,51 @@ export default function Dashboard({ token, user, onLogout }) {
   }, [token]);
 
   async function handleAddTask(event) {
-    event.preventDefault();
+  event.preventDefault();
 
-    if (!newTask.trim()) {
-      return;
-    }
+  const cleanedTask = (newTask || "").trim();
 
+  console.log("TASK BEING SENT:", cleanedTask);
+
+  if (cleanedTask.length === 0) {
+    setError("Title cannot be empty");
+    return;
+  }
+
+  try {
     setIsSaving(true);
     setError("");
 
-    try {
-      const data = await createTask(token, newTask);
-      setTasks((currentTasks) => [...currentTasks, data.task]);
-      setNewTask("");
-    } catch (err) {
-      setError("Something went wrong while saving the review item.");
-    } finally {
-      setIsSaving(false);
-    }
+    const data = await createTask(token, cleanedTask);
+
+    setTasks((prev) => [...prev, data.task]);
+    setNewTask("");
+  } catch (err) {
+    setError(err.message || "Failed to create task");
+  } finally {
+    setIsSaving(false);
   }
+}
 
   async function handleToggle(task) {
-    setError("");
+  setError("");
 
-    try {
-      const data = await updateTask(token, task.id, !task.completed);
-      setTasks((currentTasks) =>
-        currentTasks.map((item) => (item.id === task.id ? data.task : item))
-      );
-    } catch (err) {
-      setError("Something went wrong while updating the review item.");
-    }
+  try {
+    const data = await updateTask(
+      token,
+      task.id,
+      !task.completed
+    );
+
+    setTasks((current) =>
+      current.map((t) =>
+        t.id === task.id ? data.task : t
+      )
+    );
+  } catch (err) {
+    setError("Something went wrong while updating the review item.");
   }
+}
 
   return (
     <div className="dashboard">
@@ -73,7 +86,10 @@ export default function Dashboard({ token, user, onLogout }) {
         </button>
       </div>
 
-      <form className="task-form" onSubmit={handleAddTask}>
+      <form className="task-form" onSubmit={(e) => {
+  e.preventDefault();
+  handleAddTask(e);
+}}>
         <input
           type="text"
           value={newTask}

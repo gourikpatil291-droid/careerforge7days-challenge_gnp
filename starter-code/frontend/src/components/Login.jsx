@@ -14,6 +14,10 @@ export default function Login({ onLogin }) {
 
     try {
       const data = await loginUser({ email, password });
+
+      localStorage.setItem("careerforge_token", data.token);
+      localStorage.setItem("careerforge_user", JSON.stringify(data.user));
+
       onLogin(data);
     } catch (err) {
       setError(err.message || "Login failed. Check the app and try again.");
@@ -25,25 +29,27 @@ export default function Login({ onLogin }) {
   return (
     <form className="panel" onSubmit={handleSubmit}>
       <h2>Login</h2>
+
       <label>
         Email
         <input
           type="email"
           value={email}
-          onChange={(event) => setEmail(event.target.value)}
-          autoComplete="email"
+          onChange={(e) => setEmail(e.target.value)}
         />
       </label>
+
       <label>
         Password
         <input
           type="password"
           value={password}
-          onChange={(event) => setPassword(event.target.value)}
-          autoComplete="current-password"
+          onChange={(e) => setPassword(e.target.value)}
         />
       </label>
+
       {error ? <p className="error-message">{error}</p> : null}
+
       <button type="submit" disabled={isLoading}>
         {isLoading ? "Checking..." : "Log in"}
       </button>
