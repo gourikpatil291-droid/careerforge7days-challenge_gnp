@@ -1,9 +1,0 @@
-[INFO] Backend running on port 5000
-[INFO] POST /api/login 200 OK
-[INFO] Token generated for user: student@careerforge.dev
-[WARN] GET /api/tasks 401 Unauthorized
-[ERROR] TokenExpiredError: jwt expired
-[INFO] GET /api/tasks 200 OK
-[WARN] Server restarted
-[INFO] In-memory task store initialized
-[INFO] Current task count: 0
