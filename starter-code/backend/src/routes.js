@@ -58,18 +58,7 @@ router.post("/analyze/:candidateId", requireAuth, (req, res) => {
     }
 
     info("AI_PROVIDER=mock");
-  }
-
-  if (candidate.id === "c_104") {
-    warn("Resume text quality below analysis threshold for candidate_id=c_104");
-    error("Resume analysis failed: malformed_or_missing_resume_content");
-    warn("No graceful fallback message configured for candidate_id=c_104");
-    return res.status(500).json({
-      message: "Resume content is not analysis-ready for this candidate"
-    });
-  }
-
-  try {
+  } try {
     const resumeText = readResumeText(candidate.id);
     const analysis = analyzeResumeText(candidate.id, resumeText);
     candidate.screeningScore = analysis.score;
